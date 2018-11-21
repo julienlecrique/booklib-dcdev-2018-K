@@ -23,7 +23,7 @@ class AuthorFixtures extends Fixture
 
             $aut = new Author();
             $aut->setFirstName($author[0]);
-            $aut->setLastName($author[0]);
+            $aut->setLastName($author[1]);
             $manager->persist($aut);
             $this->setReference('author-'. strtolower($author[1]), $aut);
         }
