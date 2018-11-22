@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    {{ dump(book) }}
+<section class="container mt-5">
 
     <i class="fas fa-4x fa-pulse fa-hat-wizard"></i>
     <h1> {{ book.title }}</h1>
@@ -21,16 +21,14 @@
     </ul>
 
     <h2>Listes des livres du même auteur</h2>
-
-    <ul>
+    <div class="row">
         {% for otherbook in otherbooks %}
-            <li>
-                <a href="{{ path('book_show', {'slug': otherbook.slug}) }}">
-                    {{ otherbook.title }}
-                </a>
-            </li>
-            {%  else %}
+            <div class="col-md-3">
+            {% include 'book/card.html.twig' with {'book' : otherbook} only %}
+            </div>
+        {%  else %}
             <li>Aucun autre livre</li>
         {% endfor %}
-    </ul>
+    </div>
+</section>
 {% endblock %}

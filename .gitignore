@@ -11,8 +11,6 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
-.idea/
-*.bak
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -20,3 +18,8 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+
+.idea/
+*.bak
+/public/uploads/

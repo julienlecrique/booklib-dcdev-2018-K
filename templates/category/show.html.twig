@@ -2,7 +2,7 @@
 
 {% block title %}{{ category.name }}!{% endblock %}
 {% block body %}
-<h1>Livre dans la catégorie {{ category.name }}</h1>
+<h1 class="mt-5">Livre dans la catégorie {{ category.name }}</h1>
 <ul>
     {% for book in category.book  %}
         <li>
