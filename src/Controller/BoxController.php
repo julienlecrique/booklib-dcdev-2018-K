@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Box;
 use App\Form\BoxType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -79,6 +80,7 @@ class BoxController extends AbstractController
 
     /**
      * @Route("/{id}", name="box_delete", methods="DELETE")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Request $request, Box $box): Response
     {
